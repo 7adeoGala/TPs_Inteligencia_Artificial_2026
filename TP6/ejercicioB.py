@@ -1,6 +1,7 @@
 import sys
 sys.stdout.reconfigure(encoding='utf-8')
 import math
+import random
 
 # Funciones auxiliares
 
@@ -17,8 +18,9 @@ def discriminante(x1, x2):
 
 eta = 0.5
 
-# Pesos iniciales
-W = [0.3, -0.2, 0.1]   # [w0, w1, w2]
+# Pesos iniciales aleatorios pequeños (positivos y negativos)
+random.seed(42)  # fijamos seed para reproducibilidad
+W = [random.uniform(-0.5, 0.5) for _ in range(3)]   # [w0, w1, w2]
 
 # Patrones
 patrones = [

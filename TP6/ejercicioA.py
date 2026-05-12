@@ -85,7 +85,7 @@ def backprop_iteration(patron_name, x, target, W3, W4, eta):
     error = target - y4
     print(f"\n  Error = target - y4 = {target} - {y4:.6f} = {error:.6f}")
 
-    # PASO 3: Backward pass — deltas 
+    # PASO 2: Backward pass — deltas 
     print("\n BACKWARD PASS")
 
     # Delta neurona de salida 4
@@ -100,7 +100,7 @@ def backprop_iteration(patron_name, x, target, W3, W4, eta):
     print(f"     = {delta4:.6f} * ({W4[3]}) * {y3:.6f}*(1-{y3:.6f})")
     print(f"     = {delta4:.6f} * ({W4[3]}) * {sigmoid_deriv(y3):.6f} = {delta3:.6f}")
 
-    # Actualización de pesos 
+    # PASO 3: Actualización de pesos 
     print("\n ACTUALIZACIÓN DE PESOS")
 
     # Pesos de salida
